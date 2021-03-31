@@ -1,0 +1,24 @@
+Компиляция из папки проекта:
+javac src/com/katsuba/task0/HelloMain.java
+
+Запуск:
+java src/com/katsuba/task0/HelloMain
+
+Запуск с аргументами (перечисление аргументов через пробел):
+java src/com/katsuba/task0/HelloMain hello world
+
+Компиляция всех файлов типа *.java:
+javac src/com/katsuba/task0/*.java
+
+Компиляция в директорию out:
+javac -d out src/com/katsuba/task0/HelloMain.java
+
+Запуск:
+java -classpath out com/katsuba/task0/HelloMain
+
+Создание jar:
+jar -cf Hello.jar com/katsuba/task0/HelloMain.class
+
+Запуск jar:
+java -jar HelloMain.jar
+

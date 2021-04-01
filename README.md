@@ -31,6 +31,7 @@ javac -classpath lib/commons-io-2.8.0.jar -d out src/com/katsuba/task0/FileMain.
 java -classpath lib/commons-io-2.8.0.jar;out com/katsuba/task0/FileMain file.txt
 
 **Creating `jar` including library:**  
+*(`FileMain.jar `- name of jar file, `MANIFEST.MF` - manifest file, `FileMain.class` - class, `commons-io-2.8.0.jar` - library)*  
 jar cfm FileMain.jar MANIFEST.MF FileMain.class commons-io-2.8.0.jar
 
 *File `MANIFEST.MF`:*  
@@ -40,4 +41,5 @@ Created-By: 1.8.0_271 (Oracle Corporation)
 Main-Class: FileMain  
 
 **Run `jar` including library:**  
+*(`FileMain.jar` - jar file, `file.txt` - program argument)*  
 java -jar FileMain.jar file.txt

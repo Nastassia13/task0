@@ -12,7 +12,7 @@ java src/com/katsuba/task0/HelloMain hello world
 **Compilation of all `*.java` files:**  
 javac src/com/katsuba/task0/*.java
 
-**Compiling to out directory:**  
+**Compilation to out directory:**  
 javac -d out src/com/katsuba/task0/HelloMain.java
 
 **Run:**  
@@ -23,3 +23,21 @@ jar -cf Hello.jar com/katsuba/task0/HelloMain.class
 
 **Run `jar`:**  
 java -jar HelloMain.jar
+
+**Compilation including library:**  
+javac -classpath lib/commons-io-2.8.0.jar -d out src/com/katsuba/task0/FileMain.java
+
+**Run including library:**  
+java -classpath lib/commons-io-2.8.0.jar;out com/katsuba/task0/FileMain file.txt
+
+**Creating `jar` including library:**  
+jar cfm FileMain.jar MANIFEST.MF FileMain.class commons-io-2.8.0.jar
+
+*File `MANIFEST.MF`:*  
+Manifest-Version: 1.0  
+Class-Path: commons-io-2.8.0.jar  
+Created-By: 1.8.0_271 (Oracle Corporation)  
+Main-Class: FileMain  
+
+**Run `jar` including library:**  
+java -jar FileMain.jar file.txt
